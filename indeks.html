@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OrionFix - Serwis Komputerowy</title>
+    <style>
+        body {
+            background-color: #050014;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: linear-gradient(to right, #4b0082, #00d9ff);
+            padding: 20px;
+            font-size: 24px;
+            box-shadow: 0px 4px 15px rgba(0, 255, 255, 0.5);
+        }
+        .logo {
+            width: 300px;
+            margin: 20px auto;
+            display: block;
+            filter: drop-shadow(0px 0px 15px #00d9ff);
+        }
+        nav {
+            background: #0d0d26;
+            padding: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 255, 255, 0.3);
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            font-size: 18px;
+        }
+        .section {
+            padding: 40px 20px;
+            margin: 20px auto;
+            width: 80%;
+            background: #0d0d26;
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(0, 255, 255, 0.5);
+        }
+        .table-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: #1a1a40;
+            color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(127, 0, 255, 0.7);
+        }
+        th, td {
+            padding: 15px;
+            border: 1px solid #7f00ff;
+            text-align: center;
+        }
+        th {
+            background: #4b0082;
+            box-shadow: inset 0px 4px 8px rgba(0, 255, 255, 0.5);
+        }
+    </style>
+    <script>
+        function addComment() {
+            var text = document.getElementById('commentText').value;
+            if (text) {
+                var commentSection = document.getElementById('comments');
+                commentSection.innerHTML += "<p>" + text + "</p>";
+                document.getElementById('commentText').value = '';
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <img src="logotyp.jpg" class="logo" alt="OrionFix Logo">
+        OrionFix - Profesjonalny Serwis Komputerowy
+    </header>
+    
+    <nav>
+        <a href="#uslugi">Usługi</a>
+        <a href="#cennik">Cennik</a>
+        <a href="#pakiety">Pakiety</a>
+        <a href="#opinie">Opinie</a>
+        <a href="#kontakt">Kontakt</a>
+        <a href="#tworzenie-stron">Tworzenie Stron</a>
+    </nav>
+
+    <div class="hero">
+        <h1>Naprawa • Optymalizacja • Składanie PC</h1>
+        <a href="#kontakt" class="button">Umów naprawę</a>
+    </div>
+
+    <div class="section" id="cennik">
+        <h2>Cennik Usług</h2>
+        <div class="table-container">
+            <table>
+                <tr><th>Usługa</th><th>Cena (od)</th></tr>
+                <tr><td>Diagnostyka</td><td>50 zł</td></tr>
+                <tr><td>Instalacja systemu</td><td>150 zł</td></tr>
+                <tr><td>Czyszczenie układu chłodzenia + organizacja kabli</td><td>120 zł</td></tr>
+                <tr><td>Delikatny overclocking</td><td>200 zł</td></tr>
+                <tr><td>Instalacja chłodzenia wodnego</td><td>250 zł</td></tr>
+                <tr><td>Tworzenie stron internetowych</td><td>Cena do ustalenia</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="section" id="pakiety">
+        <h2>Pakiety Usług</h2>
+        <div class="table-container">
+            <table>
+                <tr><th>Pakiet</th><th>Opis</th><th>Cena</th></tr>
+                <tr><td><b>Pakiet Clean</b></td><td>Czyszczenie sprzętu + optymalizacja systemu + organizacja kabli</td><td>150 zł</td></tr>
+                <tr><td><b>Pakiet Boost</b></td><td>Instalacja SSD + przyspieszenie Windows</td><td>250 zł</td></tr>
+                <tr><td><b>Pakiet Gaming</b></td><td>Składanie PC + konfiguracja gier + OC</td><td>500 zł</td></tr>
+                <tr><td><b>Pakiet Extreme</b></td><td>Chłodzenie wodne + overclocking + testy wydajności</td><td>800 zł</td></tr>
+                <tr><td><b>Pakiet Biznes</b></td><td>Kompleksowa obsługa IT dla firm</td><td>Cena do ustalenia</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="contact section" id="kontakt">
+        <h2>Kontakt</h2>
+        📞 Telefon: 795-259-429<br>
+        ✉️ E-mail: kontakt@orionfix.pl<br>
+        <br>
+        <a href="mailto:kontakt@orionfix.pl" class="button">Umów naprawę</a>
+    </div>
+
+    <div class="section" id="opinie">
+        <h2>Opinie klientów</h2>
+        <div id="comments"></div>
+        <div class="comment-box">
+            <h3>Dodaj swoją opinię</h3>
+            <textarea id="commentText" rows="4" cols="50"></textarea><br>
+            <button onclick="addComment()">Dodaj</button>
+        </div>
+    </div>
+</body>
+</html>
